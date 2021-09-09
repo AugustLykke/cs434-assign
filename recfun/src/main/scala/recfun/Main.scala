@@ -14,15 +14,21 @@ object Main {
   /**
    * Exercise 1
    */
-  def pascal(c: Int, r: Int): Int = ???
+  def pascal(c: Int, r: Int): Int = 
+    if (c == 0 || c == r) 1 else pascal(c-1, r-1) + pascal(c, r-1)
 
   /**
    * Exercise 2
    */
-  def balance(chars: List[Char]): Boolean = ???
+    /*
+  def balance(chars: List[Char]): Boolean = {
+   def balanceCounter(open: Int, chars: List[Char]): Boolean =
+     if (chars.isEmpty)
 
+  }
+ */
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  //def countChange(money: Int, coins: List[Int]): Int = ???
 }
