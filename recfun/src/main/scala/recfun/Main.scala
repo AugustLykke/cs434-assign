@@ -20,15 +20,22 @@ object Main {
   /**
    * Exercise 2
    */
-    /*
-  def balance(chars: List[Char]): Boolean = {
-   def balanceCounter(open: Int, chars: List[Char]): Boolean =
-     if (chars.isEmpty)
 
+  def balance(chars: List[Char]): Boolean = {
+
+    def balanceCounter(counter: Int, chars: List[Char]): Boolean = {
+      if (chars.isEmpty && counter == 0) true
+      else if (chars.isEmpty && counter != 0 || counter < 0) false
+      else {
+        val newPar = if (chars.head == '(') 1 else if (chars.head == ')') -1 else 0
+        balanceCounter(counter + newPar, chars.tail)
+      }
+    }
+
+    balanceCounter(0, chars)
   }
- */
   /**
    * Exercise 3
    */
-  //def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int = ???
 }
