@@ -37,5 +37,15 @@ object Main {
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int = {
+    def countChangeRec(money: Int, coins: List[Int]): Int = {
+      if (money == 0) 1
+      else if (coins.isEmpty || money < 0) 0
+      else{
+        val diff = money - coins.head
+        countChangeRec(diff, coins) + countChangeRec(money, coins.tail)
+    }
+  }
+   countChangeRec(money, coins.sorted.reverse)
+  }
 }
