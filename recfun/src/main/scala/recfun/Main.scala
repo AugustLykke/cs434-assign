@@ -34,6 +34,7 @@ object Main {
 
     balanceCounter(0, chars)
   }
+
   /**
    * Exercise 3
    */
