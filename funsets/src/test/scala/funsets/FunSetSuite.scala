@@ -141,4 +141,42 @@ class FunSetSuite extends FunSuite {
     } 
   }
 
+  test("Test for all on equal numbers") {
+    new TestSets{
+      val s = filter(s0To10, x => x % 2 == 0) 
+      assert(forall(s, x => x % 2 == 0), "forall 1")
+      assert(forall(s, x=> x > 0), "forall 2")
+      assert(!forall(s, x => x % 5 == 0), "forall 3")
+      assert(!forall(s, x => x > 4 ), "forall 4")
+    } 
+  }
+
+  test("Test forall on equal numbers") {
+    new TestSets{
+      val s = filter(s0To10, x => x % 2 == 0) 
+      assert(forall(s, x => x % 2 == 0), "forall 1")
+      assert(forall(s, x=> x > 0), "forall 2")
+      assert(!forall(s, x => x % 5 == 0), "forall 3")
+      assert(!forall(s, x => x > 4 ), "forall 4")
+    } 
+  }
+  
+  test("Test exists, one element must satisfy p") {
+    new TestSets{
+      assert(exists(s0To10, x => x == 5), "exists 1")
+      assert(exists(s0To10, x => x % 2 == 0), "exists 2")
+      assert(!exists(s0To10, x => x < 0), "exists 3")
+    } 
+  }
+  
+  test("Map function returns set with the function applied on all"){
+    new TestSets{
+      val s = map(s0To10, x => x*2)
+      assert(contains(s, 20), "map 1")
+      assert(!contains(s, 5), "map 2")
+      assert(contains(s, 4), "map 3")
+    }
+  }
+
+  
 }
