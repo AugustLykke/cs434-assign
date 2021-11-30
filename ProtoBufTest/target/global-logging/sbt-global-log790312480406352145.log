@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(1eceda48-e85b-4c5e-84f2-23133031592b), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/august/Documents/AdvancedProgramming/cs434-assign/ProtoBufTest/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 2.13.3); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 6 s, completed 30 Nov 2021, 15.20.06[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
